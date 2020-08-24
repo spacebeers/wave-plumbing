@@ -1,0 +1,87 @@
+p {
+    margin: 0 0 15px 0;
+}
+
+a {
+    color: @primary;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+a {
+    transition: opacity @ani-speed ease-in;
+
+    &:hover {
+        opacity: 0.8;
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @secondary-font;
+}
+
+h1 {
+    font-weight: 500;
+    margin-bottom: 18px;
+    font-size: 2.0rem;
+    line-height: 1.4;
+    @media (min-width: @screen-sm-min) {
+        font-size: 2.4rem;
+    }
+}
+
+h2 {
+    font-weight: 500;
+    margin-bottom: 18px;
+    font-size: 2.0rem;
+    line-height: 1.4;
+    @media (min-width: @screen-sm-min) {
+        font-size: 2.4rem;
+    }
+}
+
+ul, ol {
+    padding: 0 0 0 17px;
+    margin: 0 0 20px 0;
+}
+
+.btn, .post-edit-link {
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 8px 16px;
+    color: @palette-light !important;
+    background: @primary;
+    font-family: @primary-font;
+    text-decoration: none;
+    border-radius: @border-radius;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.post-edit-link {
+    background: @secondary;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    &:empty {
+        display: none;
+    }
+}
+
+.entry-title {
+    display: none;
+} 
+
+.banner + .container > h1:first-of-type {
+    display: none;
+}

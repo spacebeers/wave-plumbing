@@ -1,0 +1,64 @@
+.banner {
+    height: 500px;
+    @media (min-width: @screen-sm-min) {
+        height: 690px;
+    }
+    font-family: @secondary-font;
+    margin-bottom: 42px;
+    text-align: center;
+    color: @palette-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &.shrink {
+        height: 400px;
+        @media (min-width: @screen-sm-min) {
+            height: 490px;
+        }
+    }
+
+    &::before {
+        content: "";
+        background: rgba(0, 0, 0, 0.19);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .container {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 95%;
+    }
+
+    h1 {
+        font-family: @primary-font;
+        line-height: 1.1;
+        font-size: 3.6rem;
+        @media (min-width: @screen-sm-min) {
+            font-size: 6.0rem;
+        }
+        font-weight: 600;
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+
+    .banner_text {
+        display: block;
+        margin: 0;
+        font-size: 2.8rem;
+        @media (min-width: @screen-sm-min) {
+            font-size: 4.0rem;
+        }
+        font-weight: 100;
+    }
+}
+
+.banner + .container h1 {
+    display: none;
+}
